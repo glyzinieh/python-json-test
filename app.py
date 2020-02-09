@@ -1,13 +1,12 @@
-from flask import Flask
+from flask import Flask,request
 import json
-import request
 
 app = Flask(__name__)
 
 @app.route('/',methods=['POST'])
 def hello():
-    param = json.loads(request.json)
-    type = param.get('type')
+    data = request.get_json()
+    type = data["type"]
     print(type)
     return type
 
