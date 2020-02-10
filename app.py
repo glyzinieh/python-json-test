@@ -11,6 +11,7 @@ def hello():
     #print(TYPE)
     #return TYPE
     print(data)
+    print(type(data))
     return data
 
 if __name__ == '__main__':
