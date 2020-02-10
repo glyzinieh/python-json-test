@@ -14,7 +14,7 @@ def hello():
     #return TYPE
     print(data)
     print(type(data))
-    return data
+    return 'OK'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
