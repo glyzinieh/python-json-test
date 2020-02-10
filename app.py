@@ -1,3 +1,4 @@
+import ast
 import json
 
 from flask import Flask, request
@@ -7,7 +8,7 @@ app = Flask(__name__)
 @app.route('/',methods=['POST'])
 def hello():
     data = request.data.decode()
-    data = json.loads(data)
+    data = ast.literal_eval(data)
     #TYPE = data["type"]
     #print(TYPE)
     #return TYPE
