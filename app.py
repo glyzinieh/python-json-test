@@ -7,10 +7,11 @@ app = Flask(__name__)
 @app.route('/',methods=['POST'])
 def hello():
     data = request.data.decode()
-    data = json.loads(data)
-    TYPE = data["type"]
-    print(TYPE)
-    return TYPE
+    #TYPE = data["type"]
+    #print(TYPE)
+    #return TYPE
+    print(data)
+    return data
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
