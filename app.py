@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route('/',methods=['POST'])
 def hello():
     data = request.data.decode()
+    data = json.loads(data)
     #TYPE = data["type"]
     #print(TYPE)
     #return TYPE
