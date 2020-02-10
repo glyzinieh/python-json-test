@@ -1,13 +1,13 @@
-import ast
 import json
 
 from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/',methods=['POST','GET'])
+@app.route('/',methods=['POST'])
 def hello():
-    data = request.get_json()
+    data = request.data.decode()
+    data = json.loads(data)
     TYPE = data["type"]
     print(TYPE)
     return TYPE
